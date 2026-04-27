@@ -79,3 +79,65 @@
             .hero h1 { font-size: 2.5rem; }
             .hero p { font-size: 1rem; }
         }
+
+
+        /* Gallery Styles */
+.gallery-container {
+    padding: 60px 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.gallery-container h3 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 2.2rem;
+    color: #0077be;
+    margin-bottom: 30px;
+    position: relative;
+    display: inline-block;
+}
+
+/* Subtle underline for the heading */
+.gallery-container h3::after {
+    content: '';
+    display: block;
+    width: 50px;
+    height: 4px;
+    background: #ffcc00;
+    margin: 10px auto 0;
+    border-radius: 2px;
+}
+
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    padding: 20px 0;
+}
+
+.gallery-item {
+    overflow: hidden;
+    border-radius: 15px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    height: 250px;
+}
+
+.gallery-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ensures images fill the box without stretching */
+    transition: transform 0.5s ease;
+    cursor: pointer;
+}
+
+.gallery-item:hover img {
+    transform: scale(1.1); /* Zoom effect on hover */
+}
+
+/* Mobile adjustments */
+@media (max-width: 600px) {
+    .gallery-grid {
+        grid-template-columns: 1fr;
+    }
+}

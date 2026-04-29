@@ -1,0 +1,106 @@
+:root {
+    --primary-green: #2d5a27;   /* Deep Jungle Green */
+    --accent-sand: #fdfaf5;    /* Off-white Sand */
+    --water-blue: #48cae4;     /* Clear Lagoon Blue */
+    --text-charcoal: #333;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Open Sans', sans-serif;
+    background-color: var(--accent-sand);
+    color: var(--text-charcoal);
+}
+
+h1, h2, h3 {
+    font-family: 'Montserrat', sans-serif;
+    color: var(--primary-green);
+}
+
+/* --- Luxury Hero --- */
+.hero {
+    height: 70vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background: linear-gradient(rgba(0,0,0,0.2), rgba(0,0,0,0.2)), 
+                url('https://images.unsplash.com/photo-1540541338287-41700207dee6?auto=format&fit=crop&q=80&w=1500');
+    background-size: cover;
+    background-position: center;
+    color: white;
+}
+
+.hero h1 {
+    color: white;
+    font-size: 3.5rem;
+    letter-spacing: -1px;
+}
+
+.btn-cta {
+    padding: 18px 40px;
+    background: var(--primary-green);
+    color: white;
+    text-decoration: none;
+    border-radius: 50px; /* Pill shape */
+    font-weight: 600;
+    transition: transform 0.3s ease;
+    box-shadow: 0 10px 20px rgba(45, 90, 39, 0.2);
+}
+
+.btn-cta:hover {
+    transform: translateY(-3px);
+    background: #1e3d1a;
+}
+
+/* --- Clean Content Cards --- */
+.content-wrapper {
+    max-width: 1000px;
+    margin: -50px auto 50px; /* Overlaps the hero slightly for a modern look */
+    padding: 60px;
+    background: white;
+    border-radius: 30px;
+    box-shadow: 0 20px 40px rgba(0,0,0,0.05);
+}
+
+/* --- Modern Contact Split --- */
+.contact-container {
+    display: flex;
+    gap: 60px;
+}
+
+.contact-info {
+    flex: 1;
+    border-right: 1px solid #eee;
+    padding-right: 40px;
+}
+
+.contact-form {
+    flex: 2;
+    display: grid;
+    gap: 20px;
+}
+
+input, textarea {
+    width: 100%;
+    padding: 15px;
+    border: 1px solid #ddd;
+    border-radius: 12px;
+    background: #f9f9f9;
+}
+
+/* --- Map Container --- */
+.map-box {
+    margin-top: 40px;
+    border-radius: 20px;
+    overflow: hidden;
+    height: 300px;
+    background: #eee;
+}
+
+@media (max-width: 768px) {
+    .contact-container { flex-direction: column; }
+    .contact-info { border-right: none; padding-right: 0; }
+}

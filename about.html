@@ -7,10 +7,97 @@
     <title>About Us | Splash Horizon</title>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="about.css">
+    <style>
+    /* --- Navbar Styles --- */
+.navbar {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    background: white; /* You can change this to rgba(255, 255, 255, 0.9) for glass effect */
+    padding: 15px 0;
+    box-shadow: 0 2px 15px rgba(0,0,0,0.05);
+}
+
+.nav-container {
+    max-width: 1100px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+}
+
+.nav-logo {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.5rem;
+    font-weight: 700;
+    text-decoration: none;
+    color: var(--primary-green);
+    letter-spacing: -1px;
+}
+
+.nav-logo span {
+    color: var(--water-blue); /* Highlighting 'Horizon' in blue */
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    margin: 0;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: var(--text-charcoal);
+    font-weight: 600;
+    font-size: 0.95rem;
+    transition: 0.3s;
+}
+
+.nav-links a:hover {
+    color: var(--primary-green);
+}
+
+/* Small Button inside Nav */
+.nav-btn {
+    background: var(--primary-green);
+    /* color: white !important; */
+    padding: 10px 20px;
+    border-radius: 50px;
+    transition: 0.3s ease !important;
+}
+
+.nav-btn:hover {
+    background: var(--water-blue);
+    transform: translateY(-2px);
+}
+
+/* Responsive Menu (Hides links on very small screens) */
+@media (max-width: 600px) {
+    .nav-links {
+        gap: 15px;
+    }
+    .nav-links li:not(:last-child) {
+        display: none; /* Only shows "Book Now" on tiny screens to save space */
+    }
+}
+</style>
 </head>
 
 <body>
-
+<nav class="navbar">
+    <div class="nav-container">
+        <a href="index.html" class="nav-logo">Splash<span>Horizon</span></a>
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="#tickets" class="nav-btn">Book Now</a></li>
+        </ul>
+    </div>
+</nav>
     <header class="hero secondary-hero">
         <h1>Our Story</h1>
         <p>Making waves and creating memories since 1998.</p>
